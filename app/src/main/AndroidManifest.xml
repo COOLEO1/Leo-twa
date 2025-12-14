@@ -3,13 +3,13 @@
     <application
         android:label="Leo Media Player"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+
         <activity
             android:name="androidx.appcompat.app.AppCompatActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            
+            android:theme="@android:style/Theme.Material.Light.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,10 +27,6 @@
         <meta-data
             android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
             android:resource="@android:color/white" />
-
-        <meta-data
-            android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
-            android:resource="@integer/splash_screen_fade_out_duration" />
 
     </application>
 
