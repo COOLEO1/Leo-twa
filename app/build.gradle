@@ -3,15 +3,19 @@ plugins {
 }
 
 android {
-    namespace 'com.leo.player'
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.leo.player"
         minSdk 21
-        targetSdk 34
+        targetSdk 33
         versionCode 1
         versionName "1.0"
+
+        // Required for TWA
+        manifestPlaceholders = [
+            hostName: "leo-media-player.web.app"
+        ]
     }
 
     buildTypes {
@@ -20,8 +24,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    namespace 'com.leo.player'
 }
 
 dependencies {
-    implementation 'androidx.browser:browser:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.4.0'
 }
